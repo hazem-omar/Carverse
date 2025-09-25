@@ -61,5 +61,5 @@ No database will be implemented in this version, as the focus is on the frontend
 ## How to Run the Project
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/carverse.git
+   git clone https://github.com/hazem-omar/Carverse.git
    cd carverse
