@@ -63,3 +63,6 @@ No database will be implemented in this version, as the focus is on the frontend
    ```bash
    git clone https://github.com/hazem-omar/Carverse.git
    cd carverse
+## Project Resources
+All related project resources and files are available in this Google Drive folder:  
+👉 [Click Here to Access Drive](https://drive.google.com/drive/folders/1lww8x7wl_3XGIL1CmheZ8Nvo0iv8t2hy?usp=drive_link)
