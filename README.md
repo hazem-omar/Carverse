@@ -1,68 +1,75 @@
-# Carverse Project
+# Project Name
+Carverse
 
-## Overview
-Carverse is a web application developed as part of our coursework project.  
-The main purpose of Carverse is to provide an interactive platform for browsing, viewing, and managing car-related data in a user-friendly way.  
+________________________________________
 
-The project will be built using **Angular (Frontend)** and will include a **simple Backend** (either Node.js or a Fake API).  
-No database will be implemented in this version, as the focus is on the frontend and backend interaction.
+## Project Idea
+Carverse is a web application built with Angular 20 (Frontend) and a simple Backend (Node.js Express or Fake API).  
+It allows users to browse cars, view car details, and choose a payment system (Cash or Installments).  
+The goal is to create a dynamic project, not a static website.  
 
----
+________________________________________
 
-## Tech Stack
-- **Frontend:** Angular 20  
-- **Backend:** Node.js (Express) or Fake API (JSON Server)  
-- **Version Control:** GitHub  
-
----
-
-## Team Members
+## Team Members (pentaRae)
 - Hazem Omar  
 - Mazen Mohamed  
 - Yasser Mohamed  
 - Abdelrahman Sawah  
 - Abdelwahab Amr  
 
----
+________________________________________
 
-## Work Division
-- **Frontend (Angular):**
-  - UI Components & Pages: Hazem Omar  
-  - Routing & Navigation: Mazen Mohamed  
-  - Services & API Integration: Yasser Mohamed  
-  - UI Styling (Angular Material & CSS) + Testing: Abdelwahab Amr  
+## Work Plan
+1. **Research & Analysis**  
+   - Understand the needs of users who want to browse or buy cars.  
+   - Define audience personas.  
 
-- **Backend (Node.js / Fake API):**
-  - Setting up Backend & Endpoints: Abdelrahman Sawah  
-  - API Testing & Integration with Angular: All team members  
+2. **Visual Identity**  
+   - Design the logo and basic branding.  
 
----
+3. **Main Designs**  
+   - UI for main pages (Home, Cars, Car Details, Contact, Payment).  
 
-## Pages & Components
-1. **Home Page** – Overview of the platform and featured cars.  
-2. **Car List Page** – Displays a list/grid of available cars with image, model, price, and description.  
-3. **Car Details Page** – Shows detailed information about a selected car.  
-4. **About Page** – Explains what Carverse is and project purpose.  
-5. **Contact Page** – Simple form or contact details section.  
-6. **Payment Page** – Allows users to choose payment method (Cash or Installments).  
-7. **(Optional) Admin Page** – Add, edit, or delete car entries (connected with backend/fake API).  
+4. **Complementary Products**  
+   - Optional Admin page to add/edit/delete cars (via backend/fake API).  
 
----
+5. **Review & Finalization**  
+   - Testing frontend and backend integration.  
 
-## Features
-- Display a list of cars with details  
-- View single car details page  
-- Responsive and modern UI with Angular  
-- Backend endpoints (Node.js or Fake API) to simulate real data  
-- Simple **payment system** (Cash or Installments) simulation  
+6. **Final Presentation**  
+   - Submit project on GitHub + presentation slides.  
 
----
+________________________________________
 
-## How to Run the Project
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/hazem-omar/Carverse.git
-   cd carverse
-## Project Resources
-All related project resources and files are available in this Google Drive folder:  
-👉 [Click Here to Access Drive](https://drive.google.com/drive/folders/1lww8x7wl_3XGIL1CmheZ8Nvo0iv8t2hy?usp=drive_link)
+## Roles & Responsibilities
+- **Hazem Omar:** UI Components & Pages  
+- **Mazen Mohamed:** Routing & Navigation  
+- **Yasser Mohamed:** Services & API Integration  
+- **Abdelrahman Sawah:** Backend (Node.js / Fake API setup)  
+- **Abdelwahab Amr:** Styling (Angular Material & CSS) + Testing  
+
+________________________________________
+
+## KPIs (Key Performance Indicators)
+- Response time of the application  
+- Smooth navigation between pages  
+- Successful API integration  
+- User adoption rate (ease of use & feedback)  
+
+________________________________________
+
+## Instructor
+Hesham Mohamed
+
+________________________________________
+
+## Project Files
+You can find the full project files here:  
+👉 [GitHub Repository](https://github.com/hazem-omar/Carverse)  
+👉 [Google Drive Folder](https://drive.google.com/drive/folders/1lww8x7wl_3XGIL1CmheZ8Nvo0iv8t2hy?usp=drive_link)  
+
+________________________________________
+
+## License
+This project is licensed under the **MIT License**.  
+
