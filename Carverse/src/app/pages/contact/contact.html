@@ -1,1 +1,68 @@
-<p>contact works!</p>
+<div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+  <h1>Get in Touch</h1>
+  <span class="badge text-bg-secondary mt-3">Have questions? We're here to help!</span>
+</div>
+<div class="row">
+  <div class="col-sm-4 mt-4 mb-4">
+    <div class="card mx-2">
+      <div class="card-header text-bg-dark text-center">
+        Call Us
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Call Us</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet..</p>
+        <a href="#" class="btn btn-dark btn-outline-light"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 mt-4 mb-4">
+  <div class="card mx-2">
+    <div class="card-header text-bg-dark text-center">
+      Email Us
+    </div>
+    <div class="card-body">
+      <form #contactForm="ngForm" (ngSubmit)="sendEmail()">
+        <div class="input-group mb-3">
+          <span class="input-group-text">Name</span>
+          <input type="text" class="form-control" placeholder="Name" [(ngModel)]="form.name" name="name" required>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text">Email</span>
+          <input type="email" class="form-control" placeholder="Email" [(ngModel)]="form.email" name="email" required>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text">Phone</span>
+          <input type="tel" class="form-control" placeholder="Phone" [(ngModel)]="form.phone" name="phone" required>
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text">Subject</span>
+          <input type="text" class="form-control" placeholder="Subject" [(ngModel)]="form.subject" name="subject" required>
+        </div>
+
+        <div class="input-group">
+          <textarea class="form-control" placeholder="Message" [(ngModel)]="form.message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-dark btn-outline-light mt-2">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <div class="col-sm-4 mt-4 mb-4">
+    <div class="card mx-2">
+      <div class="card-header text-bg-dark text-center">
+        Visit Us
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Visit Us</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet.</p>
+        <a href="#" class="btn btn-dark btn-outline-light"></a>
+      </div>
+    </div>
+  </div>
+</div>
