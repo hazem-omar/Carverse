@@ -36,7 +36,7 @@ export class Contact {
         () => {
           console.log('SUCCESS!');
         },
-        (error) => {
+        (error:any) => {
           console.log('FAILED...', (error as EmailJSResponseStatus).text);
         },
       );
