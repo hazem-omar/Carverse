@@ -1,68 +1,92 @@
-<div class="container d-flex flex-column justify-content-center align-items-center vh-100">
-  <h1>Get in Touch</h1>
-  <span class="badge text-bg-secondary mt-3">Have questions? We're here to help!</span>
-</div>
-<div class="row">
-  <div class="col-sm-4 mt-4 mb-4">
-    <div class="card mx-2">
-      <div class="card-header text-bg-dark text-center">
-        Call Us
+<section class="vh-100">
+  <div class="container d-flex flex-column justify-content-center align-items-center pt-5">
+    <h1>Get in Touch</h1>
+    <span class="badge text-bg-warning mt-3">Have questions? We're here to help!</span>
+  </div>
+  <div class="row mx-0 mt-5">
+    <div class="col-sm-4 my-4">
+      <div class="card mx-2 border-0 rounded-4">
+        <div class="card-header text-warning bg-dark text-center">
+          Operating Hours
+        </div>
+        <div class="card-body">
+          <br>
+          <p class="card-text">Sunday - Thursday: 9 AM - 6 PM</p>
+          <hr>
+          <br>
+          <p class="card-text">Saturday: 10 AM - 8 PM</p>
+          <hr>
+          <br>
+          <p class="card-text">Friday: Closed</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-sm-4 my-4">
+    <div class="card mx-2 border-0 rounded-4">
+      <div class="card-header text-warning bg-dark text-center">
+        Email Us
       </div>
       <div class="card-body">
-        <h5 class="card-title">Call Us</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet..</p>
-        <a href="#" class="btn btn-dark btn-outline-light"></a>
+        <form #contactForm="ngForm" (ngSubmit)="sendEmail()">
+          <div class="input-group mb-3">
+            <span class="input-group-text bg-warning">Name</span>
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="form.name" name="name" required>
+          </div>
+  
+          <div class="input-group mb-3">
+            <span class="input-group-text bg-warning">Email</span>
+            <input type="email" class="form-control" placeholder="Email" [(ngModel)]="form.email" name="email" required>
+          </div>
+  
+          <div class="input-group mb-3">
+            <span class="input-group-text bg-warning">Phone</span>
+            <input type="tel" class="form-control" placeholder="Phone" [(ngModel)]="form.phone" name="phone" required>
+          </div>
+  
+          <div class="input-group mb-3">
+            <span class="input-group-text bg-warning">Subject</span>
+            <input type="text" class="form-control" placeholder="Subject" [(ngModel)]="form.subject" name="subject" required>
+          </div>
+  
+          <div class="input-group">
+            <textarea class="form-control" placeholder="Message" [(ngModel)]="form.message" name="message" required></textarea>
+          </div>
+  
+          <button type="submit" class="btn btn-warning btn-outline-dark border-0 mt-2">Send</button>
+        </form>
       </div>
     </div>
   </div>
-
-  <div class="col-sm-4 mt-4 mb-4">
-  <div class="card mx-2">
-    <div class="card-header text-bg-dark text-center">
-      Email Us
-    </div>
-    <div class="card-body">
-      <form #contactForm="ngForm" (ngSubmit)="sendEmail()">
-        <div class="input-group mb-3">
-          <span class="input-group-text">Name</span>
-          <input type="text" class="form-control" placeholder="Name" [(ngModel)]="form.name" name="name" required>
+  
+    <div class="col-sm-4 my-4">
+      <div class="card mx-2 border-0 rounded-4">
+        <div class="card-header text-warning bg-dark text-center">
+          Visit Us
         </div>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text">Email</span>
-          <input type="email" class="form-control" placeholder="Email" [(ngModel)]="form.email" name="email" required>
+        <div class="card-body">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.108982390314!2d31.35479818134395!3d30.033731110285064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583daefbd44231%3A0x10247f2a5bc89e9f!2sThe%20Egyptian%20Chinese%20University-%20Nasr%20City%20Branch!5e0!3m2!1sen!2seg!4v1762283220055!5m2!1sen!2seg" width="430" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text">Phone</span>
-          <input type="tel" class="form-control" placeholder="Phone" [(ngModel)]="form.phone" name="phone" required>
-        </div>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text">Subject</span>
-          <input type="text" class="form-control" placeholder="Subject" [(ngModel)]="form.subject" name="subject" required>
-        </div>
-
-        <div class="input-group">
-          <textarea class="form-control" placeholder="Message" [(ngModel)]="form.message" name="message" required></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-dark btn-outline-light mt-2">Send</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-  <div class="col-sm-4 mt-4 mb-4">
-    <div class="card mx-2">
-      <div class="card-header text-bg-dark text-center">
-        Visit Us
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Visit Us</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet.</p>
-        <a href="#" class="btn btn-dark btn-outline-light"></a>
       </div>
     </div>
   </div>
-</div>
+</section>
+<section class="container-fluid py-5 bg-light text-dark rounded-0">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h3 class="fw-bold mb-3">Subscribe to Newsletter</h3>
+        <p class="text-secondary mb-1">Get the latest updates and offers directly in your inbox.</p>
+        <p class="text-secondary">Stay informed about our new arrivals and exclusive deals.</p>
+      </div>
+      <div class="col-md-6">
+        <form class="d-flex flex-column gap-3">
+          <input type="email" class="form-control rounded-pill border-0 py-3 px-4" placeholder="Enter your email">
+          <button type="submit" class="btn btn-warning fw-semibold rounded-pill py-3">
+            Subscribe Now
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
