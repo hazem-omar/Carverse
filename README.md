@@ -6,9 +6,13 @@ Carverse is a modern web application built using Angular 20 for the frontend and
 The platform allows users to:
 
 •	Browse a wide range of cars
+
 •	View detailed information for each car (specs, price, images)
+
 •	Search and filter cars based on categories
+
 •	Create and manage user accounts (login / register)
+
 •	Interact with a clean, responsive, and user-friendly interface
 
 The main goal of Carverse is to provide a smooth car-browsing experience with fast performance, intuitive navigation, and a visually appealing UI.
@@ -16,9 +20,13 @@ ________________________________________
 Team Members (pentaRae)
 
 Mazen Mohamed
+
 Hazen Omar
+
 Abdel-Wahab Amr
+
 Abdelrahman Sawah
+
 Yasser Mohamed
 ________________________________________
 Work Plan
