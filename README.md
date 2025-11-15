@@ -33,8 +33,11 @@ Work Plan
 1.	Research & Analysis
    
 o	Studying user needs
+
 o	Competitive analysis (existing car listing platforms)
+
 o	Identifying key features and main points
+
 o	Audience personas
 
 1.	Car buyers
@@ -43,41 +46,63 @@ o	Audience personas
 5.	Users comparing models before purchasing
 2.	Visual Identity
 o	Color palette selection
+
 o	Typography
+
 o	UI style guidelines
+
 o	Logo design
  
-3.	Main Designs
+4.	Main Designs
 o	Complete UI/UX wireframes
+
 o	Landing page, product listing, product details, login/register, profile
-4.	Review & Finalization
+
+6.	Review & Finalization
 o	Internal review
+
 o	Fixing design inconsistencies
+
 o	Preparing final assets
-5.	Final Presentation
+8.	Final Presentation
 o	Presenting the full design system
+
 o	Demo of the functioning Angular app
 ________________________________________
 Roles & Responsibilities
 
 •	Mazen Mohamed: Design, Login/Register Pages, Home Page
+
 •	Hazem Omar: Products page, Wishlist Page
+
 •	Abdel-Wahab Amr: Cars Database, Authentication Backend
 ________________________________________
 
 •	KPIs (Key Performance Indicators) 
+
 o	Response Time:
-	Average API response time should be less than 200ms.
+
+•	Average API response time should be less than 200ms.
+
 o	System Uptime:
-	Backend uptime target: 99% during demo and testing.
+
+•	Backend uptime target: 99% during demo and testing.
+
 o	User Adoption Rate:
-	Measuring the number of users who successfully register and interact with the app.
+
+•	Measuring the number of users who successfully register and interact with the app.
+
 o	Page Load Speed:
-	Initial load below 2 seconds.
+
+•	Initial load below 2 seconds.
+
 o	Search & Filter Efficiency:
-	Search results must update in real-time and complete within 150ms.
+
+•	Search results must update in real-time and complete within 150ms.
+
 o	UI Consistency Score:
-	95%+ design accuracy compared to Figma.
+
+•	95%+ design accuracy compared to Figma.
 ________________________________________
 
 
