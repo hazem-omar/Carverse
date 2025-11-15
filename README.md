@@ -1,7 +1,8 @@
-Project Name
+##Project Name
+
 Carverse
 ________________________________________
-Project Idea
+##Project Idea
 Carverse is a modern web application built using Angular 20 for the frontend and a simple backend powered by Strapi during development.
 The platform allows users to:
 
@@ -17,7 +18,7 @@ The platform allows users to:
 
 The main goal of Carverse is to provide a smooth car-browsing experience with fast performance, intuitive navigation, and a visually appealing UI.
 ________________________________________
-Team Members (pentaRae)
+##Team Members (pentaRae)
 
 Mazen Mohamed
 
@@ -29,7 +30,7 @@ Abdelrahman Sawah
 
 Yasser Mohamed
 ________________________________________
-Work Plan
+##Work Plan
 1.	Research & Analysis
    
 o	Studying user needs
@@ -75,7 +76,7 @@ o	Presenting the full design system
 
 o	Demo of the functioning Angular app
 ________________________________________
-Roles & Responsibilities
+##Roles & Responsibilities
 
 •	Mazen Mohamed: Design, Login/Register Pages, Home Page
 
@@ -84,7 +85,7 @@ Roles & Responsibilities
 •	Abdel-Wahab Amr: Cars Database, Authentication Backend
 ________________________________________
 
-KPIs (Key Performance Indicators) 
+##KPIs (Key Performance Indicators) 
 
 o	Response Time:
 
@@ -112,18 +113,18 @@ o	UI Consistency Score:
 ________________________________________
 
 
-Instructor 
+##Instructor 
 •	Hesham Mohamed
 
 ________________________________________
 
 
-Project Files
+##Project Files
 You can find the full project files here:
 
 [GitHub Repository](https://github.com/hazem-omar/Carverse)  
 [Google Drive Folder](https://drive.google.com/drive/folders/1lww8x7wl_3XGIL1CmheZ8Nvo0iv8t2hy?usp=drive_link)
 ________________________________________
-License
+##License
 This project is licensed under the MIT License
 ________________________________________
