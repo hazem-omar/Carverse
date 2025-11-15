@@ -53,18 +53,22 @@ o	UI style guidelines
 
 o	Logo design
  
-4.	Main Designs
+3.	Main Designs
+
 o	Complete UI/UX wireframes
 
-o	Landing page, product listing, product details, login/register, profile
+o	Landing page, product listing, product details, login/register
 
-6.	Review & Finalization
+4.	Review & Finalization
+
 o	Internal review
 
 o	Fixing design inconsistencies
 
 o	Preparing final assets
-8.	Final Presentation
+
+5.	Final Presentation
+
 o	Presenting the full design system
 
 o	Demo of the functioning Angular app
@@ -114,8 +118,8 @@ ________________________________________
 
 Project Files
 You can find the full project files here:
-Github Repository
-Google Drive Folder
+[GitHub Repository](https://github.com/hazem-omar/Carverse)  
+[Google Drive Folder](https://drive.google.com/drive/folders/1lww8x7wl_3XGIL1CmheZ8Nvo0iv8t2hy?usp=drive_link)
 ________________________________________
 License
 This project is licensed under the MIT License
