@@ -4,14 +4,17 @@ ________________________________________
 Project Idea
 Carverse is a modern web application built using Angular 20 for the frontend and a simple backend powered by Strapi during development.
 The platform allows users to:
+
 •	Browse a wide range of cars
 •	View detailed information for each car (specs, price, images)
 •	Search and filter cars based on categories
 •	Create and manage user accounts (login / register)
 •	Interact with a clean, responsive, and user-friendly interface
+
 The main goal of Carverse is to provide a smooth car-browsing experience with fast performance, intuitive navigation, and a visually appealing UI.
 ________________________________________
 Team Members (pentaRae)
+
 Mazen Mohamed
 Hazen Omar
 Abdel-Wahab Amr
@@ -20,14 +23,16 @@ Yasser Mohamed
 ________________________________________
 Work Plan
 1.	Research & Analysis
+   
 o	Studying user needs
 o	Competitive analysis (existing car listing platforms)
 o	Identifying key features and main points
 o	Audience personas
+
 1.	Car buyers
-2.	Car enthusiasts
-3.	Showroom owners
-4.	Users comparing models before purchasing
+3.	Car enthusiasts
+4.	Showroom owners
+5.	Users comparing models before purchasing
 2.	Visual Identity
 o	Color palette selection
 o	Typography
@@ -46,6 +51,7 @@ o	Presenting the full design system
 o	Demo of the functioning Angular app
 ________________________________________
 Roles & Responsibilities
+
 •	Mazen Mohamed: Design, Login/Register Pages, Home Page
 •	Hazem Omar: Products page, Wishlist Page
 •	Abdel-Wahab Amr: Cars Database, Authentication Backend
