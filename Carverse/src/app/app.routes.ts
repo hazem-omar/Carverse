@@ -7,16 +7,17 @@ import { Wishlist } from './pages/wishlist/wishlist';
 import { Payment } from './pages/payment/payment';
 import { Contact } from './pages/contact/contact';
 import { About } from './pages/about/about';
+import { ErrorPage } from './pages/error-page/error-page';
 
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'cart', component: CarProduct },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: Home },
   { path: 'login', component: Login },
   { path: 'register', component: Register },
-  { path: 'car/:id', component: CarProduct },
+  { path: 'products', component: CarProduct },
   { path: 'wishlist', component: Wishlist },
   { path: 'about', component: About },
   { path: 'contact', component: Contact },
   { path: 'payment', component: Payment },
-  { path: '**', redirectTo: '' }, // fallback
+  { path: '**', component: ErrorPage },
 ];
