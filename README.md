@@ -44,7 +44,9 @@ o	Audience personas
 3.	Car enthusiasts
 4.	Showroom owners
 5.	Users comparing models before purchasing
+   
 2.	Visual Identity
+
 o	Color palette selection
 
 o	Typography
