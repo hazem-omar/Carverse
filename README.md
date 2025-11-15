@@ -40,10 +40,10 @@ o	Identifying key features and main points
 
 o	Audience personas
 
-1.	Car buyers
-3.	Car enthusiasts
-4.	Showroom owners
-5.	Users comparing models before purchasing
+*	Car buyers
+*	Car enthusiasts
+*	Showroom owners
+*	Users comparing models before purchasing
    
 2.	Visual Identity
 
@@ -120,6 +120,7 @@ ________________________________________
 
 Project Files
 You can find the full project files here:
+
 [GitHub Repository](https://github.com/hazem-omar/Carverse)  
 [Google Drive Folder](https://drive.google.com/drive/folders/1lww8x7wl_3XGIL1CmheZ8Nvo0iv8t2hy?usp=drive_link)
 ________________________________________
