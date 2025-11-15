@@ -84,7 +84,7 @@ Roles & Responsibilities
 •	Abdel-Wahab Amr: Cars Database, Authentication Backend
 ________________________________________
 
-•	KPIs (Key Performance Indicators) 
+KPIs (Key Performance Indicators) 
 
 o	Response Time:
 
