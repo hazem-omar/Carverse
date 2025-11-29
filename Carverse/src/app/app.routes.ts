@@ -7,6 +7,7 @@ import { Wishlist } from './pages/wishlist/wishlist';
 import { Payment } from './pages/payment/payment';
 import { Contact } from './pages/contact/contact';
 import { About } from './pages/about/about';
+import { CarDetails } from './pages/car-details/car-details';
 import { ErrorPage } from './pages/error-page/error-page';
 
 export const routes: Routes = [
@@ -14,6 +15,7 @@ export const routes: Routes = [
   { path: 'home', component: Home },
   { path: 'login', component: Login },
   { path: 'register', component: Register },
+  { path: 'car/:documentId', component: CarDetails },
   { path: 'products', component: CarProduct },
   { path: 'wishlist', component: Wishlist },
   { path: 'about', component: About },
