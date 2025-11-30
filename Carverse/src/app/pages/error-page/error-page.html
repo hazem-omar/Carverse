@@ -1,1 +1,129 @@
-<p>error-page works!</p>
+<div class="error-page-container">
+  <!-- Animated Road Background -->
+  <div class="road-background">
+    <div class="road-line"></div>
+    <div class="road-line"></div>
+    <div class="road-line"></div>
+  </div>
+
+  <!-- Particles Effect -->
+  <div class="particles">
+    <div class="particle" *ngFor="let i of [].constructor(20); let idx = index" [style.animation-delay]="idx * 0.1 + 's'"></div>
+  </div>
+
+  <div class="container">
+    <div class="row min-vh-100 align-items-center justify-content-center py-5">
+      <div class="col-lg-10 col-xl-8">
+        <!-- Main Error Content -->
+        <div class="error-content text-center mb-5">
+          <!-- Error Icon with Animation -->
+          <div class="error-icon-wrapper mb-4">
+            <div class="error-icon mb-3">
+              <i class="fa-solid fa-car-burst text-warning"></i>
+            </div>
+            <div class="error-code-wrapper">
+              <h1 class="display-1 fw-bold text-warning mb-2 error-code">404</h1>
+              <div class="error-underline"></div>
+            </div>
+          </div>
+
+          <!-- Error Title -->
+          <h2 class="display-4 fw-bold text-light mb-3">Lost in the Road?</h2>
+
+          <!-- Error Message -->
+          <p class="lead text-light opacity-75 mb-4 px-3">
+            Looks like you've taken a wrong turn! The page you're looking for has driven off into the sunset. 
+            But don't worry, we'll help you get back on track.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center mb-5">
+            <button (click)="goBack()" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3">
+              <i class="fa-solid fa-arrow-left me-2"></i>Go Back
+            </button>
+            <a routerLink="/" class="btn btn-warning btn-lg rounded-pill px-5 py-3">
+              <i class="fa-solid fa-house me-2"></i>Go Home
+            </a>
+            <a routerLink="/products" class="btn btn-outline-warning btn-lg rounded-pill px-5 py-3">
+              <i class="fa-solid fa-car me-2"></i>Browse Cars
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Cars Section -->
+        <div class="featured-section mt-5 pt-5 border-top border-secondary">
+          <h3 class="text-center text-light mb-4">
+            <i class="fa-solid fa-star text-warning me-2"></i>
+            Featured Cars
+          </h3>
+          
+          <div *ngIf="loading" class="text-center py-4">
+            <div class="spinner-border text-warning" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+
+          <div *ngIf="!loading && featuredCars.length > 0" class="row g-4">
+            <div *ngFor="let car of featuredCars; trackBy: trackByDocumentId" class="col-md-4">
+              <div class="featured-car-card">
+                <div class="card border-0 rounded-4 overflow-hidden bg-dark text-white position-relative h-100">
+                  <img 
+                    [src]="getImageUrl(car)" 
+                    [alt]="car.name" 
+                    class="card-img" 
+                    style="height: 250px; object-fit: cover;"
+                    (error)="$event.target.src='car1.jpg'">
+                  <div class="card-img-overlay d-flex flex-column justify-content-end p-3" 
+                       style="background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 50%, transparent 100%);">
+                    <h5 class="fw-bold mb-2">{{ car.name }}</h5>
+                    <p class="fw-bold mb-2 text-warning fs-5">{{ formatPrice(car.price) }}</p>
+                    <a 
+                      [routerLink]="['/car', car.documentId]" 
+                      class="btn btn-warning btn-sm rounded-pill mt-2">
+                      View Details
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links mt-5 pt-4">
+          <p class="text-center text-light opacity-50 mb-3">Quick Navigation</p>
+          <div class="d-flex flex-wrap gap-3 justify-content-center">
+            <a routerLink="/products" class="quick-link-item">
+              <i class="fa-solid fa-car me-2"></i>Products
+            </a>
+            <a routerLink="/about" class="quick-link-item">
+              <i class="fa-solid fa-info-circle me-2"></i>About Us
+            </a>
+            <a routerLink="/contact" class="quick-link-item">
+              <i class="fa-solid fa-envelope me-2"></i>Contact
+            </a>
+            <a routerLink="/wishlist" class="quick-link-item">
+              <i class="fa-solid fa-heart me-2"></i>Wishlist
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative Floating Cars -->
+  <div class="error-decoration">
+    <div class="floating-car floating-car-1">
+      <i class="fa-solid fa-car text-warning"></i>
+    </div>
+    <div class="floating-car floating-car-2">
+      <i class="fa-solid fa-car text-warning"></i>
+    </div>
+    <div class="floating-car floating-car-3">
+      <i class="fa-solid fa-car text-warning"></i>
+    </div>
+    <div class="floating-car floating-car-4">
+      <i class="fa-solid fa-car text-warning"></i>
+    </div>
+  </div>
+</div>

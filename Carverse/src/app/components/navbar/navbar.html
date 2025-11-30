@@ -1,20 +1,35 @@
 <nav class="navbar navbar-expand-lg fixed-top" style="background-color: transparent !important; box-shadow: none;">
   <div class="container-fluid">
-    <a class="navbar-brand fs-2 fw-semibold text-light" href="#">
+    <a class="navbar-brand fs-2 fw-semibold text-light" routerLink="/">
       <img src="logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top mt-1">
       Carverse
     </a>
     <ul class="nav justify-content-end">
         <li class="nav-item">
-            <a class="nav-link active text-light fs-5" aria-current="page" href="#">Home</a>
+            <a class="nav-link text-light fs-5" routerLink="/"> <i class="fa-solid fa-house me-1"></i>Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light fs-5" href="#">Products</a>
+            <a class="nav-link text-light fs-5" routerLink="/products"><i class="fa-solid fa-car me-1"></i>Products</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-light fs-5" href="#">Cart</a>
+            <a class="nav-link text-light fs-5" routerLink="/wishlist"><i class="fa-solid fa-heart me-1"></i>Wishlist</a>
         </li>
-        <button class="btn me-2 btn-warning btn-outline-light border-0 rounded-3 fs-5" type="button">Sign In</button>
-    </ul>
+<li class="nav-item ms-2 " *ngIf="!currentUser">
+          <a class="btn btn-warning btn-signin" routerLink="/login">
+            <i class="fa-solid fa-right-to-bracket me-2"></i>Sign In
+          </a>
+        </li>
+        <li class="nav-item dropdown ms-2" *ngIf="currentUser">
+          <a class="nav-link dropdown-toggle d-flex align-items-center text-warning" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user-circle me-2"></i>
+            <span>{{ currentUser.username }}</span>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" (click)="logout()" style="cursor: pointer;">
+              <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
+            </a></li>
+          </ul>
+        </li>    
+      </ul>
   </div>
 </nav>

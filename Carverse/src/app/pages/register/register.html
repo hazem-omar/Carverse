@@ -29,23 +29,37 @@
           <div class="bg-white text-dark p-4 shadow rounded-4" style="width: 400px;">
 
             <h6 class="fw-bold text-center mb-3">Create New Account</h6>
-
+            <form (ngSubmit)="onSubmit()" #registerForm="ngForm" class="register-form">
             <label class="small text-muted">Name</label>
-            <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Name">
-
-            <label class="small text-muted">Number</label>
-            <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Number">
-
+            <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Name" [(ngModel)]="registerData.username" name="username" required minlength="3" [class.is-invalid]="registerForm.submitted && registerForm.controls['username']?.invalid">
+              
             <label class="small text-muted">Email</label>
-            <input type="email" class="form-control border-0 border-bottom mb-3" placeholder="Email">
+            <input type="email" class="form-control border-0 border-bottom mb-3" placeholder="Email" [(ngModel)]="registerData.email" name="email" required email [class.is-invalid]="registerForm.submitted && registerForm.controls['email']?.invalid">
             
 
             <label class="small text-muted">Password</label>
-            <input type="password" class="form-control border-0 border-bottom mb-3" placeholder="Password">
+            <input type="password" class="form-control border-0 border-bottom mb-3" placeholder="Password" [(ngModel)]="registerData.password" name="password" required minlength="6" [class.is-invalid]="registerForm.submitted && registerForm.controls['password']?.invalid">
 
-            <button class="btn btn-warning btn-outline-dark border-0 w-100 my-2 rounded-pill">Register</button>
+            <label class="small text-muted">Confirm Password</label>
+            <input type="password" class="form-control border-0 border-bottom mb-3" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPassword" required minlength="6" [class.is-invalid]="registerForm.submitted && registerForm.controls['confirmPassword']?.invalid">
+               <div *ngIf="errorMessage" class="alert alert-danger">
+              <i class="fa-solid fa-circle-exclamation me-2"></i>{{ errorMessage }}
+            </div>
+
+            <div *ngIf="successMessage" class="alert alert-success">
+              <i class="fa-solid fa-check-circle me-2"></i>{{ successMessage }}
+            </div>
+            <button type="submit" class="btn btn-warning btn-outline-dark border-0 w-100 my-2 rounded-pill" [disabled]="!registerForm.valid || isLoading">
+             <span *ngIf="!isLoading">
+                <i class="fa-solid fa-user-plus me-2"></i>Create Account
+              </span>
+              <span *ngIf="isLoading">
+                <span class="spinner-border spinner-border-sm me-2"></span>Creating account...
+              </span>
+            </button>
             <p class="mb-0 mt-3" style="font-size: 15px;">Already have an account?</p>
-            <a href="#" style="text-decoration: none; color: black; font-size: small;">Login <i class="fa-solid fa-arrow-right"></i></a>
+            <a routerLink="/login" style="text-decoration: none; color: black; font-size: small;">Login <i class="fa-solid fa-arrow-right"></i></a>
+          </form>
           </div>
         </div>
       </div>
