@@ -82,7 +82,7 @@ ________________________________________
 
 •	Hazem Omar: Products page, Wishlist Page
 
-•	Abdel-Wahab Amr: Car and User Database
+•	Abdel-Wahab Amr: Car and User Database, Backend
 ________________________________________
 
 ## KPIs (Key Performance Indicators) 
