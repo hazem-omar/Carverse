@@ -43,7 +43,7 @@ export interface CarResponse {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CarService {
   private apiUrl = `${environment.apiUrl}/cars`;
@@ -52,49 +52,51 @@ export class CarService {
 
   getCars(): Observable<Car[]> {
     const url = `${this.apiUrl}?populate=*`;
-    
+
     return this.http.get<CarResponse>(url).pipe(
-      map(response => {
+      map((response) => {
         if (!response || !response.data) {
           return [];
         }
+        // Return all cars from the response
         return response.data;
       })
     );
   }
 
   getCarById(id: number): Observable<Car> {
-    return this.http.get<{ data: Car }>(`${this.apiUrl}/${id}?populate=*`).pipe(
-      map(response => response.data)
-    );
+    return this.http
+      .get<{ data: Car }>(`${this.apiUrl}/${id}?populate=*`)
+      .pipe(map((response) => response.data));
   }
 
   getCarByDocumentId(documentId: string): Observable<Car> {
     // Use filters to find car by documentId
-    return this.http.get<CarResponse>(`${this.apiUrl}?filters[documentId][$eq]=${documentId}&populate=*`).pipe(
-      map(response => {
-        if (response.data && response.data.length > 0) {
-          return response.data[0];
-        }
-        throw new Error('Car not found');
-      })
-    );
+    return this.http
+      .get<CarResponse>(`${this.apiUrl}?filters[documentId][$eq]=${documentId}&populate=*`)
+      .pipe(
+        map((response) => {
+          if (response.data && response.data.length > 0) {
+            return response.data[0];
+          }
+          throw new Error('Car not found');
+        })
+      );
   }
 
   getImageUrl(car: Car): string {
     if (car.image && car.image.length > 0) {
       const image = car.image[0];
       let imageUrl = image.url;
-      
+
       // If URL is relative, prepend the backend URL
       if (imageUrl.startsWith('/')) {
         imageUrl = `${environment.apiUrl.replace('/api', '')}${imageUrl}`;
       }
-      
+
       return imageUrl;
     }
     // Fallback to default image
     return 'car1.jpg';
   }
 }
-

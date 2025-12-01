@@ -91,45 +91,28 @@ export class WishlistService {
           items = [response.data];
         }
 
-        // Extract cars from wishlist items; handle cases where `item.car` is an ID
+        // Extract cars from wishlist items
         if (items.length === 0) {
           this.wishlistSubject.next([]);
           this.loading = false;
           return of([] as Car[]);
         }
 
-        const carObservables = items.map((item: any) => {
-          const carField = item.car;
-          if (!carField) {
-            return of(null);
-          }
-          // If the backend populated the car as an object, use it
-          if (typeof carField === 'object' && (carField.id || carField.documentId)) {
-            // If only id is present, fetch full car data for consistency
-            if (!carField.name || !carField.price) {
-              return this.carService.getCarById(carField.id).pipe(catchError(() => of(null)));
+        // The backend already populates the car, so extract them directly
+        const cars: Car[] = items
+          .map((item: any) => {
+            const car = item.car;
+            // If car is already populated as an object with all data, use it
+            if (car && typeof car === 'object' && car.id && car.name && car.price) {
+              return car as Car;
             }
-            return of(carField as Car);
-          }
-          // If the backend returned just the id (number), fetch by id
-          if (typeof carField === 'number') {
-            return this.carService.getCarById(carField).pipe(catchError(() => of(null)));
-          }
-          // If backend returned a documentId string, try to fetch by documentId
-          if (typeof carField === 'string') {
-            return this.carService.getCarByDocumentId(carField).pipe(catchError(() => of(null)));
-          }
-          return of(null);
-        });
-
-        return forkJoin(carObservables).pipe(
-          map(results => results.filter((c: Car | null): c is Car => c !== null)),
-          map(cars => {
-            this.wishlistSubject.next(cars);
-            this.loading = false;
-            return cars;
+            return null;
           })
-        );
+          .filter((car: Car | null): car is Car => car !== null);
+
+        this.wishlistSubject.next(cars);
+        this.loading = false;
+        return of(cars);
       }),
       catchError(error => {
         console.error('Error loading wishlist:', error);
